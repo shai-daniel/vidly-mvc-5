@@ -216,9 +216,38 @@
     <Compile Include="Migrations\201801050452467_MigrationMakeItWork1.Designer.cs">
       <DependentUpon>201801050452467_MigrationMakeItWork1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801061209292_UpdateMembershipTypeName.cs" />
+    <Compile Include="Migrations\201801061209292_UpdateMembershipTypeName.Designer.cs">
+      <DependentUpon>201801061209292_UpdateMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061225097_UpdateMembershipTypeName2.cs" />
+    <Compile Include="Migrations\201801061225097_UpdateMembershipTypeName2.Designer.cs">
+      <DependentUpon>201801061225097_UpdateMembershipTypeName2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061227098_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201801061227098_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201801061227098_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801061231195_DropMembershipTypeName.cs" />
+    <Compile Include="Migrations\201801061231195_DropMembershipTypeName.Designer.cs">
+      <DependentUpon>201801061231195_DropMembershipTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801141505434_addBirthDate.cs" />
+    <Compile Include="Migrations\201801141505434_addBirthDate.Designer.cs">
+      <DependentUpon>201801141505434_addBirthDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801141605335_AddMoviesTable.cs" />
+    <Compile Include="Migrations\201801141605335_AddMoviesTable.Designer.cs">
+      <DependentUpon>201801141605335_AddMoviesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801141607308_updateGenresTable.cs" />
+    <Compile Include="Migrations\201801141607308_updateGenresTable.Designer.cs">
+      <DependentUpon>201801141607308_updateGenresTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -288,6 +317,7 @@
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <None Include="Views\Customers\Details.cshtml" />
     <None Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
     <None Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -336,6 +366,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801050452467_MigrationMakeItWork1.resx">
       <DependentUpon>201801050452467_MigrationMakeItWork1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061209292_UpdateMembershipTypeName.resx">
+      <DependentUpon>201801061209292_UpdateMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061225097_UpdateMembershipTypeName2.resx">
+      <DependentUpon>201801061225097_UpdateMembershipTypeName2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061227098_AddNameToMembershipType.resx">
+      <DependentUpon>201801061227098_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801061231195_DropMembershipTypeName.resx">
+      <DependentUpon>201801061231195_DropMembershipTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801141505434_addBirthDate.resx">
+      <DependentUpon>201801141505434_addBirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801141605335_AddMoviesTable.resx">
+      <DependentUpon>201801141605335_AddMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801141607308_updateGenresTable.resx">
+      <DependentUpon>201801141607308_updateGenresTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
