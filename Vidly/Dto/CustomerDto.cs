@@ -11,14 +11,14 @@ namespace Vidly.Dto
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please enter customer name.")]
+        [Required]
         [StringLength(255)]
         public string Name { get; set; }
 
         public bool IsSubscribedToNewsletter { get; set; }
 
-        [Display(Name = "Date Of Birth")]
-        [Min18YeaersIfAMember]
+        
+        //[Min18YeaersIfAMember]
         public DateTime? BirthDate { get; set; }
        
 

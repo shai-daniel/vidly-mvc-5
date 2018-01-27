@@ -26,22 +26,22 @@ namespace Vidly.Controllers.API
         }
 
         // Get /Api/Customer/1
-        public CustomerDto GetCustomer(int Id)
+        public IHttpActionResult GetCustomer(int Id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == Id);
 
             if (customer == null)
-                throw new HttpResponseException(HttpStatusCode.NotFound);
+                return NotFound();
 
-            return Mapper.Map<Customer, CustomerDto>(customer);
+            return Ok(Mapper.Map<Customer, CustomerDto>(customer));
         }
 
         // Post /Api/Customers
         [HttpPost]
-        public CustomerDto CreateCustomer(CustomerDto customerDto)
+        public IHttpActionResult CreateCustomer(CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
-                throw new HttpResponseException(HttpStatusCode.BadRequest);
+                return BadRequest();
 
             var customer = Mapper.Map<CustomerDto, Customer>(customerDto);
             _context.Customers.Add(customer);
@@ -49,7 +49,7 @@ namespace Vidly.Controllers.API
 
             customerDto.Id = customer.Id;
 
-            return customerDto;
+            return Created(new Uri(Request.RequestUri + "/" + customer.Id), customerDto);
         }
 
         // Put /Api/Customers/1
